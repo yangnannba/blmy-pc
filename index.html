@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>111111111111111</title>
+	<meta name="description" content="布兰美亚" />
+    <meta name="keywords" content="布兰美亚" />
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>	
+    <script src="js/jquery.easing.min.js"></script>
+	
+	<link rel="stylesheet" href="css/index.css" type="text/css" />
+	<script>
+	$(function(){
+		$('#fullpage').fullpage({
+			sectionsColor: ['#020504', '#0f1b17', '#14211f', '#5a706a',"#0a2922","#111b19"],
+			'navigation':true,
+			verticalCentered:false,
+			'afterLoad': function(anchorLink, index){
+				if(index == 1){
+					$('#logo').addClass("fodeIn");
+					$('#nav').addClass("fodeIn");					
+					$('#banner-center').addClass("faguang");
+				}
+			},
+			'onLeave': function(index, direction){
+				if(index == 1){
+					$('#logo').removeClass("fodeIn");
+					$('#nav').removeClass("fodeIn");					
+					$('#banner-center').removeClass("faguang");					
+				}				
+			}
+			
+			
+		});
+	});
+	</script>	
+</head>
+<body>
+<div id="fullpage">
+	<div class="section section1">
+		<div id="logo" class="fodeIn"><img src="images/logo.png" /></div>
+	     <ul id="nav" class="fodeIn">
+		    <li class="on"><a href="#">首页</a></li>
+		    <li><a href="#">产品中心</a></li>
+		    <li><a href="#">品牌动态</a></li>
+		    <li><a href="#">招商加盟</a></li>
+		    <li><a href="#">关于品牌</a></li>
+		 </ul>
+		 <div id="banner-center" class="faguang"><img src="images/banner-center.png" /></div>
+	</div>
+	<div class="section section2">
+		<div class="bannar">
+		<div class="img">
+		<ul>
+		<li style="background:url(images/section2-bg-1.jpg);display:block;">
+			<div class="load">
+			    <h2>25’</h2>
+			    <p>25岁的你<br />为工作拼命三郎，熬夜是常态</p>
+			    <p class="yingwen">25 years old Working hard for the job staying up late is the norm</p>
+			</div>
+		</li>
+		<li style="background:url(images/section2-bg-2.jpg);">
+			<div class="load">
+			    <h2>35’</h2>
+			    <p>35岁的你<br />
+
+
+为人父母陪伴小孩，耗尽精力<br />
+
+
+却也幸福</p>
+			    <p class="yingwen">Become a parent 
+to accompany a child and 
+run out of energy
+But also happy</p>
+			</div>			
+		</li>
+		<li style="background:url(images/section2-bg-3.jpg);">
+			<div class="load">
+			    <h2>45’</h2>
+			    <p>45岁的你<br />
+
+
+人到中年，上有老下有小，家<br />
+
+
+庭重任落在你身上</p>
+			    <p class="yingwen">When people are in middle 
+age, there are old and small
+and the family’s responsibil
+ity falls on you</p>
+			</div>		
+		</li>
+
+		</ul>
+		</div>
+
+		<div class="nav">
+		<ul>
+		<li><p></p></li>
+		<li><p></p></li>
+		<li><p></p></li>
+		</ul>
+		</div>
+		</div>
+<script>
+
+var i=0;
+var time_id=null;
+function auto(){
+$(".nav ul li").eq(i).find("p").animate({
+"width":"200px"
+},2900,function(){
+i++;
+$(this).css("width", '0px');
+if(i>2){
+i=0;
+}
+$(".img ul li").eq(i).fadeIn(300).siblings().fadeOut(300);
+});
+}
+
+time_id=setInterval("auto()",3000);
+
+
+
+$(".nav ul li").click(function(){
+$(".nav ul li").find("p").stop().css("width","0px");
+clearInterval(time_id);
+i=$(this).index();
+$(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+auto();
+time_id=setInterval("auto()",3000);
+})
+
+</script>		
+		
+	</div>
+	<div class="section section3">3
+	</div>
+	<div class="section section4">4
+	</div>
+	<div class="section section5">5
+	</div>
+	<div class="section section6">6
+	</div>
+</div>
+		<script src="js/jquery.backstretch.js"></script>	
+		<script src="js/index.js"></script>
+
+					
+</body>
+
+</html>	
