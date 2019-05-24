@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>111111111111111</title>
+	<title>布兰美亚</title>
 	<meta name="description" content="布兰美亚" />
     <meta name="keywords" content="布兰美亚" />
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
@@ -24,13 +24,78 @@
 					$('#nav').addClass("fodeIn");					
 					$('#banner-center').addClass("faguang");
 				}
+				if(index == 3){
+                    myTyping(true)
+				}
+				if(index == 4){
+					$('#section4-1').animate({
+						top: '20%'
+					}, 1000, 'easeOutExpo');
+					$('#section4-2').animate({
+						top: '20%'
+					}, 1000, 'easeOutExpo');
+					$('#section4-3').delay(500).animate({
+						left: '10%'
+					}, 1500, 'easeOutExpo');					
+					$('#section4-4').delay(500).animate({
+						right: '10%'
+					}, 1500, 'easeOutExpo');						
+					
+				}
+				if(index == 5){
+					$('#section5-1').delay(100).animate({
+						top: '10%',
+						opacity:'1'
+					}, 1500, 'easeOutExpo');
+					$('#section5-2').delay(100).animate({
+						bottom: '10%',
+						opacity:'1'
+					}, 1500, 'easeOutExpo');
+					$('#section5-3').delay(500).fadeIn(2000);									
+				}
+				if(index == 6){
+					$('#section6-1').delay(300).fadeIn(1000);									
+					$('#section6-2').delay(1300).fadeIn(1000);									
+				}												
 			},
 			'onLeave': function(index, direction){
 				if(index == 1){
 					$('#logo').removeClass("fodeIn");
 					$('#nav').removeClass("fodeIn");					
 					$('#banner-center').removeClass("faguang");					
-				}				
+				}
+				if(index == 3){	
+					myTyping()
+				}
+				if(index == 4){
+					$('#section4-1').animate({
+						top: '-10%'
+					}, 1500, 'easeOutExpo');
+					$('#section4-2').animate({
+						top: '-10%'
+					}, 1500, 'easeOutExpo');
+					$('#section4-3').animate({
+						left: '-100%'
+					}, 1500, 'easeOutExpo');					
+					$('#section4-4').animate({
+						right: '-100%'
+					}, 1500, 'easeOutExpo');
+				}
+				if(index == 5){
+					$('#section5-1').animate({
+						top: '-10%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$('#section5-2').animate({
+						bottom: '-10%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$('#section5-3').fadeOut(2000);									
+				}
+				if(index == 6){
+					$('#section6-1').fadeOut(1500);									
+					$('#section6-2').fadeOut(1500);									
+				}											
 			}
 			
 			
@@ -65,33 +130,15 @@
 		<li style="background:url(images/section2-bg-2.jpg);">
 			<div class="load">
 			    <h2>35’</h2>
-			    <p>35岁的你<br />
-
-
-为人父母陪伴小孩，耗尽精力<br />
-
-
-却也幸福</p>
-			    <p class="yingwen">Become a parent 
-to accompany a child and 
-run out of energy
-But also happy</p>
+			    <p>35岁的你<br />为人父母陪伴小孩，耗尽精力<br />却也幸福</p>
+			    <p class="yingwen">Become a parent <br />to accompany a child and <br />run out of energy<br />But also happy</p>
 			</div>			
 		</li>
 		<li style="background:url(images/section2-bg-3.jpg);">
 			<div class="load">
 			    <h2>45’</h2>
-			    <p>45岁的你<br />
-
-
-人到中年，上有老下有小，家<br />
-
-
-庭重任落在你身上</p>
-			    <p class="yingwen">When people are in middle 
-age, there are old and small
-and the family’s responsibil
-ity falls on you</p>
+			    <p>45岁的你<br />人到中年，上有老下有小，家<br />庭重任落在你身上</p>
+			    <p class="yingwen">When people are in middle <br /><br />age, there are old and small<br />and the family’s responsibility falls on you</p>
 			</div>		
 		</li>
 
@@ -106,46 +153,92 @@ ity falls on you</p>
 		</ul>
 		</div>
 		</div>
-<script>
+		<script>
 
-var i=0;
-var time_id=null;
-function auto(){
-$(".nav ul li").eq(i).find("p").animate({
-"width":"200px"
-},2900,function(){
-i++;
-$(this).css("width", '0px');
-if(i>2){
-i=0;
-}
-$(".img ul li").eq(i).fadeIn(300).siblings().fadeOut(300);
-});
-}
+			var i=0;
+			var time_id=null;
+			function auto(){
+			$(".nav ul li").eq(i).find("p").animate({
+			"width":"200px"
+			},2900,function(){
+			i++;
+			$(this).css("width", '0px');
+			if(i>2){
+			i=0;
+			}
+			$(".img ul li").eq(i).fadeIn(300).siblings().fadeOut(300);
+			});
+			}
 
-time_id=setInterval("auto()",3000);
+			time_id=setInterval("auto()",3000);
 
 
 
-$(".nav ul li").click(function(){
-$(".nav ul li").find("p").stop().css("width","0px");
-clearInterval(time_id);
-i=$(this).index();
-$(".img ul li").eq(i).fadeIn().siblings().fadeOut();
-auto();
-time_id=setInterval("auto()",3000);
-})
+			$(".nav ul li").click(function(){
+			$(".nav ul li").find("p").stop().css("width","0px");
+			clearInterval(time_id);
+			i=$(this).index();
+			$(".img ul li").eq(i).fadeIn().siblings().fadeOut();
+			auto();
+			time_id=setInterval("auto()",3000);
+			})
 
-</script>		
+		</script>		
 		
 	</div>
-	<div class="section section3">3
+	<div class="section section3">
+		<div id="divTyping"></div>
+	<script>
+
+						   
+
+                   
+						function myTyping(a){
+                                   if(a){
+									   var myDiv = document.getElementById("divTyping");
+									   var contentArr = "度过忙碌的一天、适应一个时差、陪伴小孩你总能找到能量，满血回归但是，你的皮肤呢？它还坚持得住吗?".split("");
+									   var content = "";
+									   var index = 0;								
+									   var ID = setInterval(function () {
+										content += contentArr[index];
+										myDiv.innerHTML = content + "_";
+										index++;
+										if(index === contentArr.length){
+										 myDiv.innerHTML = content ;
+										 clearInterval(ID);
+										}
+									   },100); 									   
+								   }else{
+									   clearInterval(ID);
+								   }
+		 					   
+							}
+					
+						
+	</script>
 	</div>
-	<div class="section section4">4
+	<div class="section section4">
+		<div id="section4-1">BLANMLYA</div>
+		<div id="section4-2">六大臻肤享受</div>
+		<div id="section4-3">
+			<p>抚平干纹细纹</p>
+			<p>紧致松弛肌肤</p>
+			<p>改善水肿浮胀</p>
+		</div>
+		<div id="section4-4">
+			<p>纤塑肌肤轮廓</p>
+			<p>紧实塑小咬肌</p>
+			<p>提拉甩掉双下巴</p>
+		</div>		
 	</div>
-	<div class="section section5">5
+	<div class="section section5">
+		<div id="section5-1">“一滴，焕颜新生，驻颜魔法，让时光无迹可寻”</div>
+		<div id="section5-2">布兰美亚——轻奢护肤“黑科技”，从此冻龄时光  |  Light luxury skin care "black technology", from this frozen age</div>
+		<div id="section5-3"><img src="images/section5-logo.png" /></div>
 	</div>
-	<div class="section section6">6
+	<div class="section section6">
+		<div id="section6-1"><img src="images/section5-logo.png" /></div>		
+		<div id="section6-2">“用更直接的方式，做最有效的护肤”</div>		
 	</div>
 </div>
 		<script src="js/jquery.backstretch.js"></script>	
