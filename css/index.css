@@ -24,11 +24,16 @@ a > img { vertical-align: bottom; }
 
 body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333333; overflow-y: scroll; overflow-x: hidden; *overflow-y: auto !important; font-size: px2rem(22px); }
 
-#logo { position: relative; left: 0; top: 80px; width: 168px; height: 50px; opacity: 0; }
+.section1 { position: relative; }
+.section1 .slide-img { width: 100%; height: 100%; }
+
+#logo { position: absolute; left: 0; top: 80px; width: 168px; height: 50px; opacity: 0; z-index: 99999; }
+
+.slide { position: relative; }
 
 #banner-center { width: 128px; height: 236px; position: absolute; left: 50%; top: 50%; margin-top: -118px; margin-left: -64px; opacity: 0; transform: scale(0.5); background: rgba(27, 82, 59, 0.5); }
 
-#nav { position: relative; margin-left: 50%; left: 0; top: 20px; opacity: 0; }
+#nav { position: absolute; margin-left: 50%; left: 0; top: 80px; opacity: 0; z-index: 99999; }
 #nav li { margin-right: 50px; float: left; }
 #nav li.on a { color: #a58646; }
 #nav a { font-size: 20px; color: #fff; }
