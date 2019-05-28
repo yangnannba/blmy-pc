@@ -54,8 +54,20 @@
 					$('#section5-3').delay(500).fadeIn(2000);									
 				}
 				if(index == 6){
-					$('#section6-1').delay(300).fadeIn(1000);									
-					$('#section6-2').delay(1300).fadeIn(1000);									
+					$('#section6-1').delay(300).animate({
+						top: '25%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').delay(1300).animate({
+						top: '46%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').delay(2300).animate({
+						top: '65%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');					
+					
+					
 				}												
 			},
 			'onLeave': function(index, direction){
@@ -93,8 +105,18 @@
 					$('#section5-3').fadeOut(2000);									
 				}
 				if(index == 6){
-					$('#section6-1').fadeOut(1500);									
-					$('#section6-2').fadeOut(1500);									
+					$('#section6-1').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');								
 				}											
 			}
 			
@@ -244,7 +266,11 @@
 		<div id="section6-1"><img src="images/section5-logo.png" /></div>		
 		<div id="section6-2">“用更直接的方式，做最有效的护肤”</div>	
 		<div id="section6-3">
-			
+			<img class="erweima" src="images/erweima.png"  />
+			<ul class="lianxi">
+				<li>400-837-3518</li>
+				<li>zhy964791196</li>
+			</ul>
 		</div>
 	</div>
 </div>
