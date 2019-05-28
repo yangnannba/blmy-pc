@@ -498,3 +498,19 @@ float:left;
         }
     }
 }
+
+
+.dongtai{
+    background: url(../images/dongtai-bg.jpg) center;
+    background-size: cover;	
+}
+#mainBox{ 
+	width:1328px;
+	height:800px;
+	position:relative; 
+	overflow:hidden; 
+	margin:50px auto;
+	@include boxshadow(0 10px 10px #ccc);
+}
+#content{ height:2500px; position:absolute; left:0; top:0; background:#fff}
+.scrollDiv{ width:18px; position:absolute; top:0; background:#666; border-radius:10px;}

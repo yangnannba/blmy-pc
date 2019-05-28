@@ -105,4 +105,12 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 #section6-3 .lianxi li:before { content: ""; display: inline-block; width: 30px; height: 30px; background: url(../images/dianhua-icon.png) no-repeat; background-size: 100% 100%; vertical-align: middle; margin-right: 6px; }
 #section6-3 .lianxi li:nth-child(2):before { content: ""; display: inline-block; width: 30px; height: 30px; background: url(../images/weixin-icon.png) no-repeat; background-size: 100% 100%; vertical-align: middle; margin-right: 6px; }
 
+.dongtai { background: url(../images/dongtai-bg.jpg) center; background-size: cover; }
+
+#mainBox { width: 1328px; height: 800px; position: relative; overflow: hidden; margin: 50px auto; -webkit-box-shadow: 0 10px 10px #ccc; -moz-box-shadow: 0 10px 10px #ccc; box-shadow: 0 10px 10px #ccc; }
+
+#content { height: 2500px; position: absolute; left: 0; top: 0; background: #fff; }
+
+.scrollDiv { width: 18px; position: absolute; top: 0; background: #666; border-radius: 10px; }
+
 /*# sourceMappingURL=index.css.map */
