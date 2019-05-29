@@ -111,7 +111,7 @@ body {
   *overflow-y: auto !important;
   font-size: px2rem(22px);
 }
-
+/*首页*/
 .section1{
 	position: relative;
     .slide-img{
@@ -499,7 +499,7 @@ float:left;
     }
 }
 
-
+/*文章页*/
 .dongtai{
     background: url(../images/dongtai-bg.jpg) center;
     background-size: cover;	
@@ -585,4 +585,96 @@ float:left;
         padding:8px 30px;
         background: #033c36;
     }   
+}
+
+/*动态列表页*/
+#dt-list{
+	text-align: center;
+	@extend %fontsize-none;
+	position:relative;
+	top:-100%;
+	left:0;
+
+	opacity: 0;
+	
+	li{
+		width:588px;
+		height:140px;
+		display: inline-block;
+		background: #2c4038;
+		text-align: left;
+		position: relative;
+		margin:0 48px 38px;
+	    @include boxshadow(0 3px 3px rgba(0,0,0,0.3));		
+		dt{
+			background: #033c36;
+			position: absolute;
+			top: -10px;
+			left:-10px;
+			width:80px;
+			height:100px;
+			color:$color;
+			text-align: center;
+			font-size: 12px;
+			span{
+				font-size: 28px;
+				display: block;
+				border-bottom: 1px solid #000;
+				font-weight: bold;
+				width:80%;
+				margin:0 auto 8px;
+				padding-bottom: 8px;
+				padding-top:10px;
+			}
+		}
+		dd{
+			color:#fff;
+			padding:30px 20px 0 90px;
+			h3{
+				font-size: 16px;
+				margin-bottom: 24px;
+				line-height: 1.5em;
+			}
+			span.more{
+				font-size: 12px;
+				&:after{
+					content:"";
+					display: inline-block;
+					vertical-align: middle;
+					margin-left:8px;
+					width:30px;
+					height:4px;
+					background: url(../images/right-icon.png) no-repeat;
+					background-size: 100% 100%;
+				}
+			}
+		}
+	}
+}
+
+#fenye {
+  text-align: center;
+  @extend %fontsize-none;
+	position:absolute;
+	bottom:-10%;
+	left:0;
+	opacity: 0;
+	width:100%;	
+}
+#fenye li {
+  font-size: 18px;	
+  display: inline-block;
+  margin: 0 8px;
+  box-sizing: border-box;
+}
+#fenye li a {
+  color: #fff;
+  padding:6px 12px;  
+}
+#fenye li.thisclass {
+  color: $color;
+  background: #033c36;
+  padding:6px 12px;
+  border:0; 
+  box-sizing: border-box;   
 }

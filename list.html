@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>	
+    <script src="js/jquery.easing.min.js"></script>
+	
+	<link rel="stylesheet" href="css/index.css" type="text/css" />
+	<script>
+	$(function(){
+		$('#fullpage').fullpage({
+			sectionsColor: ['#020504',"#111b19"],
+			'navigation':true,
+			verticalCentered:false,
+			afterRender:function(){
+					$("#dt-list").delay(300).animate({
+						top: '20%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").delay(1000).animate({
+						bottom: '5%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');									
+			},
+			'afterLoad': function(anchorLink, index){
+				if(index == 1){
+					$('#logo').addClass("fodeIn");
+					$('#nav').addClass("fodeIn");					
+					$('#banner-center').addClass("faguang");
+					$("#dt-list").delay(300).animate({
+						top: '20%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").delay(1000).animate({
+						bottom: '5%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');					
+				}
+
+				if(index == 2){
+					$('#section6-1').delay(300).animate({
+						top: '25%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').delay(1300).animate({
+						top: '46%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').delay(2300).animate({
+						top: '65%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');					
+					
+					
+				}												
+			},
+			'onLeave': function(index, direction){
+				if(index == 1){
+					$('#logo').removeClass("fodeIn");
+					$('#nav').removeClass("fodeIn");					
+					$('#banner-center').removeClass("faguang");	
+					$("#dt-list").animate({
+						top: '-100%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").animate({
+						bottom: '-10%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');														
+				}
+
+				if(index == 2){
+					$('#section6-1').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');								
+				}											
+			}
+			
+			
+		});
+	});
+	</script>	
+</head>
+<body>
+<div id="fullpage">
+	<div class="section section1 dongtai">
+		 <div id="logo" class="fodeIn"><img src="images/logo.png" /></div>
+	     <ul id="nav" class="fodeIn">
+		    <li class="on"><a href="#">首页</a></li>
+		    <li><a href="#">产品中心</a></li>
+		    <li><a href="#">品牌动态</a></li>
+		    <li><a href="#">招商加盟</a></li>
+		    <li><a href="#">关于品牌</a></li>
+		 </ul>
+		 
+		 <ul id="dt-list">
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+			 <li>
+				 <a href="#">
+					 <dl>
+						 <dt><span>24</span>2019-05</dt>
+						 <dd>
+							 <h3>布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚布兰美亚......</h3>
+							 <span class="more">more</span>
+						 </dd>
+					 </dl>
+				 </a>
+			 </li>
+		 </ul>
+		 
+		<ul id="fenye">
+			<li class="thisclass">1</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">5</a></li>	
+			<li><a href="#">下一页</a></li>								
+		</ul>	
+	</div>
+
+	<div class="section section6">
+		<div id="section6-1"><img src="images/section5-logo.png" /></div>		
+		<div id="section6-2">“用更直接的方式，做最有效的护肤”</div>	
+		<div id="section6-3">
+			<img class="erweima" src="images/erweima.png"  />
+			<ul class="lianxi">
+				<li>400-837-3518</li>
+				<li>zhy964791196</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+					
+</body>
+
+</html>	
