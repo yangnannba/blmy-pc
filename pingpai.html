@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>	
+    <script src="js/jquery.easing.min.js"></script>
+	
+	<link rel="stylesheet" href="css/index.css" type="text/css" />
+	<script>
+	$(function(){
+		$('#fullpage').fullpage({
+			sectionsColor: ['#020504',"#111b19"],
+			'navigation':true,
+			verticalCentered:false,
+			afterRender:function(){
+					$("#dt-list").delay(300).animate({
+						top: '20%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").delay(1000).animate({
+						bottom: '5%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');									
+			},
+			'afterLoad': function(anchorLink, index){
+				if(index == 1){
+					$('#logo').addClass("fodeIn");
+					$('#nav').addClass("fodeIn");					
+					$('#banner-center').addClass("faguang");
+					$("#dt-list").delay(300).animate({
+						top: '20%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").delay(1000).animate({
+						bottom: '5%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');					
+				}
+				if(index == 2){
+
+					myTyping(true)
+				}
+				if(index == 4){
+					$("#pingpai-4-1").delay(300).animate({
+						top: '12%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-2").delay(300).animate({
+						left: '0%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-3").delay(300).animate({
+						bottom: '0%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-4").delay(300).animate({
+						right: '0%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+				}				
+				if(index == 5){
+
+					myTyping5(true)
+				}				
+				if(index == 6){
+					$('#section6-1').delay(300).animate({
+						top: '25%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').delay(1300).animate({
+						top: '46%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').delay(2300).animate({
+						top: '65%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');					
+					
+					
+				}												
+			},
+			'onLeave': function(index, direction){
+				if(index == 1){
+					$('#logo').removeClass("fodeIn");
+					$('#nav').removeClass("fodeIn");					
+					$('#banner-center').removeClass("faguang");	
+					$("#dt-list").animate({
+						top: '-100%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$("#fenye").animate({
+						bottom: '-10%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');														
+				}
+				if(index == 2){
+					myTyping()
+				}
+				if(index == 4){
+					$("#pingpai-4-1").animate({
+						top: '-10%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-2").delay(300).animate({
+						left: '-100%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-3").delay(300).animate({
+						bottom: '-100%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+					$("#pingpai-4-4").delay(300).animate({
+						right: '-100%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');	
+				}					
+				if(index == 5){
+
+					myTyping5()
+				}					
+				
+				if(index == 6){
+					$('#section6-1').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');									
+					$('#section6-2').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');
+					$('#section6-3').animate({
+						top: '110%',
+						opacity:'0'
+					}, 1000, 'easeOutExpo');								
+				}											
+			}
+			
+			
+		});
+	});
+	</script>	
+</head>
+<body>
+<div id="fullpage">
+	<div class="section pingpai-1">
+		 <div id="logo" class="fodeIn"><img src="images/logo.png" /></div>
+	     <ul id="nav" class="fodeIn">
+		    <li class="on"><a href="#">首页</a></li>
+		    <li><a href="#">产品中心</a></li>
+		    <li><a href="#">品牌动态</a></li>
+		    <li><a href="#">招商加盟</a></li>
+		    <li><a href="#">关于品牌</a></li>
+		 </ul>
+		 <p class="pingpai-1-h1">布兰美亚   岂止所见</p>
+	</div>
+	<div class="section pingpai-2">
+
+		<div id="pingpai-2-divTyping"></div>
+	<script>
+
+						   
+
+                   
+						function myTyping(a){
+                                   if(a){
+									   var myDiv = document.getElementById("pingpai-2-divTyping");
+									   var contentArr = "<p><span>1902年</span>，英国的科学家贝利斯和斯塔林首次在人体中发现了多肽的物质，由于其影响深远，诺贝尔委员会授于他们最高奖项：诺贝尔生理学奖。</p><p><span>1905年</span>，荷兰帝斯曼集团成立实验室，集中国内外一流的前沿科技力量，将肽作为研究对象，应用于护肤、营养、制药等多个领域。</p>".split("");
+									   var content = "";
+									   var index = 0;								
+									   var ID = setInterval(function () {
+										content += contentArr[index];
+										myDiv.innerHTML = content + "_";
+										index++;
+										if(index === contentArr.length){
+										 myDiv.innerHTML = content ;
+										 clearInterval(ID);
+										}
+									   },100); 									   
+								   }else{
+									   clearInterval(ID);
+								   }
+		 					   
+							}
+					
+						
+	</script>
+	</div>
+
+	<div class="section section1 dongtai">
+		3
+	</div>
+	<div class="section pingpai-4">
+		<div id="pingpai-4-1">这一惊人的发现和试验结果迅速被各大品牌应用于产品之中</div>
+		<div id="pingpai-4-main">
+	
+			<div id="pingpai-4-2">
+				<img src="images/pingpai-4-1.jpg"  />
+				<p>菲*嘉焕龄时光眼霜</p>
+			</div>
+			<div id="pingpai-4-3">
+				<img src="images/pingpai-4-2.jpg"  />
+				<p>菲*嘉焕龄时光眼霜</p>
+			</div>
+			<div id="pingpai-4-4">
+				<img src="images/pingpai-4-3.jpg"  />
+				<p>菲*嘉焕龄时光眼霜</p>
+			</div>
+		</div>
+	</div>
+	<div class="section pingpai-5">
+		<div id="pingpai-5-divTyping"></div>
+	<script>
+
+						   
+
+                   
+						function myTyping5(a){
+                                   if(a){
+									   var myDiv = document.getElementById("pingpai-5-divTyping");
+									   var contentArr = "类蛇毒肽被国外品牌逐渐广泛的应用于产品之中<br />而此时的国内仍停留在打“肉毒素”针剂、代购等渠道获取资源<br />而此时荷兰帝斯曼集团多肽研究室力求以荷兰为中心辐射全球的服务理念<br />第一步锁定亚洲肌肤<br /><span>拯救每一个追求冻龄的你<span>".split("");
+									   var content = "";
+									   var index = 0;								
+									   var ID = setInterval(function () {
+										content += contentArr[index];
+										myDiv.innerHTML = content + "_";
+										index++;
+										if(index === contentArr.length){
+										 myDiv.innerHTML = content ;
+										 clearInterval(ID);
+										}
+									   },100); 									   
+								   }else{
+									   clearInterval(ID);
+								   }
+		 					   
+							}
+					
+						
+	</script>
+	</div>
+	<div class="section section6">
+		<div id="section6-1"><img src="images/section5-logo.png" /></div>		
+		<div id="section6-2">“用更直接的方式，做最有效的护肤”</div>	
+		<div id="section6-3">
+			<img class="erweima" src="images/erweima.png"  />
+			<ul class="lianxi">
+				<li>400-837-3518</li>
+				<li>zhy964791196</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+					
+</body>
+
+</html>	

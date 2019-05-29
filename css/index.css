@@ -147,4 +147,35 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 
 #fenye li.thisclass { color: #a58646; background: #033c36; padding: 6px 12px; border: 0; box-sizing: border-box; }
 
+/**/
+.pingpai-1 { background: url(../images/pingpai-1-bg.jpg) center; background-size: cover; }
+.pingpai-1 .pingpai-1-h1 { font-size: 30px; color: #a58646; text-align: center; font-family: "新宋体"; position: absolute; top: 50%; left: 0; width: 100%; }
+
+#pingpai-2-divTyping { width: 900px; position: absolute; top: 40%; left: 50%; margin-top: -100px; margin-left: -450px; color: #fff; font-size: 28px; line-height: 2.2em; font-family: "新宋体"; text-align: center; }
+#pingpai-2-divTyping p { text-indent: 2em; margin-bottom: 10px; text-align: justify; }
+#pingpai-2-divTyping p span { color: #a58646; }
+
+.pingpai-2 { background: url(../images/pingpai-2-bg.jpg) center; background-size: cover; }
+
+#pingpai-4-main { width: 1200px; height: 467px; position: relative; top: 20%; margin: 0 auto; }
+
+.pingpai-4 { background: url(../images/pingpai-4-bg.jpg) center; background-size: cover; font-family: "新宋体"; overflow: hidden; }
+.pingpai-4 p { font-size: 22px; color: #a58646; text-align: center; line-height: 56px; background: #081615; }
+
+.pingpai-5 { background: url(../images/pingpai-5-bg.jpg) center; background-size: cover; }
+
+#pingpai-5-divTyping { width: 900px; position: absolute; top: 40%; left: 50%; margin-top: -100px; margin-left: -450px; color: #fff; font-size: 28px; line-height: 2.2em; font-family: "新宋体"; text-align: center; }
+#pingpai-5-divTyping span { color: #a58646; }
+
+#pingpai-4-1 { position: relative; top: -10%; font-size: 30px; color: #a58646; text-align: center; }
+
+#pingpai-4-2 { position: absolute; top: 0; left: -100%; }
+#pingpai-4-2 img { width: 489px; height: 192px; }
+
+#pingpai-4-3 { position: absolute; bottom: -100%; left: 0; }
+#pingpai-4-3 img { width: 489px; height: 155px; }
+
+#pingpai-4-4 { position: absolute; right: -100%; top: 0; }
+#pingpai-4-4 img { width: 700px; height: 412px; }
+
 /*# sourceMappingURL=index.css.map */
