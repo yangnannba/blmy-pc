@@ -189,7 +189,7 @@ addScroll.prototype={
   p.style.height=_height+"px";
   p.style.left=_left+"px";
   p.style.position="absolute";
-  p.style.background="#ccc";
+  p.style.background="url(./images/scroll-bg.png) repeat-y";
   contentBox.style.width=(mainBox.offsetWidth-_scrollWidth)+"px";
   var _scrollHeight=parseInt(_height*(_height/conHeight));
   if(_scrollHeight>=mainBox.clientHeight){
@@ -226,10 +226,10 @@ addScroll.prototype={
    }
   }
   element.onmouseover=function(){
-   this.style.background="url(./images/scroll.png)"; 
+   this.style.background="url(./images/scroll.png) no-repeat"; 
   }
   element.onmouseout=function(){
-   this.style.background="url(./images/scroll.png)"; 
+   this.style.background="url(./images/scroll.png) no-repeat"; 
   }
  },
 

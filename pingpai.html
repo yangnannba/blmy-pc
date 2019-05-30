@@ -46,6 +46,16 @@
 
 					myTyping(true)
 				}
+				if(index == 3){
+					$('#mainBox').delay(1200).animate({
+						left: '0%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+					$('#pingpai-3-right').delay(200).animate({
+						right: '0%',
+						opacity:'1'
+					}, 1000, 'easeOutExpo');
+				}
 				if(index == 4){
 					$("#pingpai-4-1").delay(300).animate({
 						top: '12%',
@@ -102,6 +112,9 @@
 				if(index == 2){
 					myTyping()
 				}
+				if(index == 3){
+
+				}				
 				if(index == 4){
 					$("#pingpai-4-1").animate({
 						top: '-10%',
@@ -192,9 +205,199 @@
 	</script>
 	</div>
 
-	<div class="section section1 dongtai">
-		3
+	<div class="section pingpai-3">
+		<div id="pingpai-3-main">
+			<div id="mainBox">
+			 <div id="content">	 
+				<h3>以护肤为例：</h3>
+				<p>因为我们的皮肤是一层很致密的结构，它的主要作用是防御，而不是吸收，所以，一种活性成分想要透过肌肤角质层，与它的亲水性、分子量、三维结构等都有关系。多肽本身的分子量会比较大（大于500道尔顿），又有亲水基团，皮肤角质层是拒绝进入的。</p>
+				<p>所以聪明的科学家又对多肽进行了结构改造，加上了棕榈酸或者其他亲油的基团，使多肽更加亲肤，所以肽的名称通常由修饰基—氨基酸数—后缀序号组成，就是为什么我们看到的多肽大多数都叫做棕榈酰XX肽或者乙酰基XX肽。</p>
+				<p>同时“肉毒素”针剂因能够阻断神经递质的释放，使肌肉松弛，许多假性的皱纹快速消失因而被大范围作为常见贵妇医美手段而使用，而在20世纪的中后期，人们对于美的追求和渴望愈发理性和渴望长久的保持，而打肉毒素造成面瘫的事件持续增多，荷兰帝斯曼集团的科研人员，集合了肉毒素的优势，衍生了一些类多肽，其中著名的就是棕榈酰三肽－5和二肽二氨基丁酰苄基酰胺二乙酸盐。</p>
+				<p>这里可能有人会问了，二肽二氨基丁酰苄基酰胺二乙酸盐和类蛇毒肽有什么关系呢？那就要从它的作用机理说起，二肽二氨基丁酰苄基酰胺二乙酸盐是一种模拟蛇毒血清的合成胜肽，其效果能直达肌底，模拟毒蛇毒液侵入人体后产生的神经麻痹肌肉收缩的特性，有效阻断肌肉收缩的信号传递，快速平复各类表情纹、静态纹及细纹，平滑肌肤。</p>			 	 	 	 
+			 </div>	 
+			</div>
+			<div id="pingpai-3-right"><img src="images/pingpai-3-img.jpg" /></div>
+		</div>
+
+			<script type="text/javascript">
+
+			var doc=document;
+			var _wheelData=-1;
+			var mainBox=doc.getElementById('mainBox');
+
+			function bind(obj,type,handler){
+			 var node=typeof obj=="string"?$(obj):obj;
+			 if(node.addEventListener){
+			  node.addEventListener(type,handler,false);
+			 }else if(node.attachEvent){
+			  node.attachEvent('on'+type,handler);
+			 }else{
+			  node['on'+type]=handler;
+			 }
+			}
+
+			function mouseWheel(obj,handler){
+			 var node=typeof obj=="string"?$(obj):obj;
+			  bind(node,'mousewheel',function(event){
+			   var data=-getWheelData(event);
+			   handler(data);
+			   if(document.all){
+				window.event.returnValue=false;
+			   }else{
+				event.preventDefault();
+			   }
+			  });
+
+			  bind(node,'DOMMouseScroll',function(event){
+			   var data=getWheelData(event);
+			   handler(data);
+			   event.preventDefault();
+			  });
+			  function getWheelData(event){
+			   var e=event||window.event;
+			   return e.wheelDelta?e.wheelDelta:e.detail*40;
+			  }
+			}
+
+			function addScroll(){
+			 this.init.apply(this,arguments);
+			}
+
+			addScroll.prototype={
+			 init:function(mainBox,contentBox,className){
+			  var mainBox=doc.getElementById(mainBox);
+			  var contentBox=doc.getElementById(contentBox);
+			  var scrollDiv=this._createScroll(mainBox,className);
+			  this._resizeScorll(scrollDiv,mainBox,contentBox);
+			  this._tragScroll(scrollDiv,mainBox,contentBox);
+			  this._wheelChange(scrollDiv,mainBox,contentBox);
+			  this._clickScroll(scrollDiv,mainBox,contentBox);
+			 },
+
+			 _createScroll:function(mainBox,className){
+			  var _scrollBox=doc.createElement('div')
+			  var _scroll=doc.createElement('div');
+			  var span=doc.createElement('span');
+			  _scrollBox.appendChild(_scroll);
+			  _scroll.appendChild(span);
+			  _scroll.className=className;
+			  mainBox.appendChild(_scrollBox);
+			  return _scroll;
+			 },
+
+			 _resizeScorll:function(element,mainBox,contentBox){
+			  var p=element.parentNode;
+			  var conHeight=contentBox.offsetHeight;
+			  var _width=mainBox.clientWidth;
+			  var _height=mainBox.clientHeight;
+			  var _scrollWidth=element.offsetWidth;
+			  var _left=_width-_scrollWidth;
+			  p.style.width=_scrollWidth+"px";
+			  p.style.height=_height+"px";
+			  p.style.left=_left+"px";
+			  p.style.position="absolute";
+			  p.style.background="url(./images/scroll-bg.png) repeat-y";
+			  contentBox.style.width=(mainBox.offsetWidth-_scrollWidth)+"px";
+			  var _scrollHeight=parseInt(_height*(_height/conHeight));
+			  if(_scrollHeight>=mainBox.clientHeight){
+			   element.parentNode.style.display="none";
+			  }
+			  element.style.height=_scrollHeight+"px";
+			 },
+
+			 _tragScroll:function(element,mainBox,contentBox){
+			  var mainHeight=mainBox.clientHeight;
+			  element.onmousedown=function(event){
+			   var _this=this;
+			   var _scrollTop=element.offsetTop;
+			   var e=event||window.event;
+			   var top=e.clientY;
+			   //this.onmousemove=scrollGo;
+			   document.onmousemove=scrollGo;
+			   document.onmouseup=function(event){
+				this.onmousemove=null;
+			   }
+			   function scrollGo(event){
+				var e=event||window.event;
+				var _top=e.clientY;
+				var _t=_top-top+_scrollTop;
+				if(_t>(mainHeight-element.offsetHeight)){
+				 _t=mainHeight-element.offsetHeight;
+				}
+				if(_t<=0){
+				 _t=0;
+				}
+				element.style.top=_t+"px";
+				contentBox.style.top=-_t*(contentBox.offsetHeight/mainBox.offsetHeight)+"px";
+				_wheelData=_t;
+			   }
+			  }
+			  element.onmouseover=function(){
+			   this.style.background="url(./images/scroll.png) no-repeat"; 
+			  }
+			  element.onmouseout=function(){
+			   this.style.background="url(./images/scroll.png) no-repeat"; 
+			  }
+			 },
+
+			 _wheelChange:function(element,mainBox,contentBox){
+			  var node=typeof mainBox=="string"?$(mainBox):mainBox;
+			  var flag=0,rate=0,wheelFlag=0;
+			  if(node){
+			   mouseWheel(node,function(data){
+				wheelFlag+=data;
+				if(_wheelData>=0){
+				 flag=_wheelData;
+				 element.style.top=flag+"px";
+				 wheelFlag=_wheelData*12;
+				 _wheelData=-1;
+				}else{
+				 flag=wheelFlag/12;
+				}
+				if(flag<=0){
+				 flag=0;
+				 wheelFlag=0;
+				}
+				if(flag>=(mainBox.offsetHeight-element.offsetHeight)){
+				 flag=(mainBox.clientHeight-element.offsetHeight);
+				 wheelFlag=(mainBox.clientHeight-element.offsetHeight)*12;
+				}
+				element.style.top=flag+"px";
+				contentBox.style.top=-flag*(contentBox.offsetHeight/mainBox.offsetHeight)+"px";
+			   });
+			  }
+			 },
+			 
+			 _clickScroll:function(element,mainBox,contentBox){
+			  var p=element.parentNode;
+			  p.onclick=function(event){
+			   var e=event||window.event;
+			   var t=e.target||e.srcElement;
+			   var sTop=document.documentElement.scrollTop>0?document.documentElement.scrollTop:document.body.scrollTop;
+			   var top=mainBox.offsetTop;
+			   var _top=e.clientY+sTop-top-element.offsetHeight/2;
+			   if(_top<=0){
+				_top=0;
+			   }
+			   if(_top>=(mainBox.clientHeight-element.offsetHeight)){
+				_top=mainBox.clientHeight-element.offsetHeight;
+			   }
+			   if(t!=element){
+				element.style.top=_top+"px";
+				contentBox.style.top=-_top*(contentBox.offsetHeight/mainBox.offsetHeight)+"px";
+				_wheelData=_top;
+			   }
+			  }
+			 }
+			}
+
+			new addScroll('mainBox','content','scrollDiv');
+
+			</script>
+
+
 	</div>
+	
 	<div class="section pingpai-4">
 		<div id="pingpai-4-1">这一惊人的发现和试验结果迅速被各大品牌应用于产品之中</div>
 		<div id="pingpai-4-main">
@@ -211,6 +414,7 @@
 				<img src="images/pingpai-4-3.jpg"  />
 				<p>菲*嘉焕龄时光眼霜</p>
 			</div>
+			
 		</div>
 	</div>
 	<div class="section pingpai-5">
