@@ -507,6 +507,7 @@ float:left;
 #mainBox{ 
 	width:1200px;
 	height:580px;
+	background: #fff;
 	position:relative; 
 	top:180px;
 	overflow:hidden; 
@@ -543,7 +544,7 @@ float:left;
         }
     }
 }
-.scrollDiv{ width:14px; position:absolute; top:0; background:#666 url(../images/scroll.png); }
+.scrollDiv{ width:14px; position:absolute; top:0; background: url(../images/scroll.png) no-repeat; }
 
 
 .pre-next{
@@ -794,4 +795,63 @@ float:left;
         width:700px;
         height: 412px;        
     }
+}
+
+.pingpai-3{
+    background: url(../images/pingpai-3-bg.jpg) center;
+    background-size: cover; 	
+}
+#pingpai-3-main{
+	width:1220px;
+	position: relative;
+	top:12%;
+	margin:0 auto;
+	#mainBox{ 
+        background:transparent;
+		opacity: 0;
+		width:600px;
+		height:580px;
+		position:absolute; 
+		top:0;
+		left:-100%;
+		overflow:hidden; 
+		margin:0 auto;
+		@include boxshadow(0 0 0 transparent);
+		font-family: "新宋体";	
+
+		h3{
+			font-size: 32px;
+			color: $color;
+			font-weight: normal;
+			text-indent: 2em;
+			text-align: left;
+			margin-bottom: 10px;
+		}
+		p{
+			text-indent: 2em;
+			font-size: 26px;
+			line-height: 2.2em;
+			color: #fff;
+		    text-align:justify;			
+		}
+	}
+	#content{ 
+		position:absolute; left:0; top:0;
+		text-align: center;
+		padding:0 ;
+        background:transparent;	
+			p{
+				padding-right:20px;
+			}
+	}	
+}
+
+
+#pingpai-3-right{
+	width:600px;
+	height: 580px;
+	position: absolute;
+	right: 200%;
+	top: 0;
+	opacity: 0;
 }

@@ -111,7 +111,7 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 /*文章页*/
 .dongtai { background: url(../images/dongtai-bg.jpg) center; background-size: cover; }
 
-#mainBox { width: 1200px; height: 580px; position: relative; top: 180px; overflow: hidden; margin: 0 auto; -webkit-box-shadow: 0 10px 10px #033c36; -moz-box-shadow: 0 10px 10px #033c36; box-shadow: 0 10px 10px #033c36; }
+#mainBox { width: 1200px; height: 580px; background: #fff; position: relative; top: 180px; overflow: hidden; margin: 0 auto; -webkit-box-shadow: 0 10px 10px #033c36; -moz-box-shadow: 0 10px 10px #033c36; box-shadow: 0 10px 10px #033c36; }
 
 #content { position: absolute; left: 0; top: 0; background: #fff; text-align: center; padding: 80px 0 180px; }
 #content .h1 { font-size: 32px; font-family: "新宋体"; color: #a58646; text-align: center; margin-bottom: 30px; }
@@ -119,7 +119,7 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 #content .cntent-body { padding: 0 70px; }
 #content .cntent-body p { margin-bottom: 10px; text-align: justify; font-size: 18px; line-height: 1.75em; }
 
-.scrollDiv { width: 14px; position: absolute; top: 0; background: #666 url(../images/scroll.png); }
+.scrollDiv { width: 14px; position: absolute; top: 0; background: url(../images/scroll.png) no-repeat; }
 
 .pre-next { font-size: 18px; line-height: 2em; margin-left: 70px; }
 .pre-next li { margin-bottom: 10px; }
@@ -177,5 +177,16 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 
 #pingpai-4-4 { position: absolute; right: -100%; top: 0; }
 #pingpai-4-4 img { width: 700px; height: 412px; }
+
+.pingpai-3 { background: url(../images/pingpai-3-bg.jpg) center; background-size: cover; }
+
+#pingpai-3-main { width: 1220px; position: relative; top: 12%; margin: 0 auto; }
+#pingpai-3-main #mainBox { background: transparent; opacity: 0; width: 600px; height: 580px; position: absolute; top: 0; left: -100%; overflow: hidden; margin: 0 auto; -webkit-box-shadow: 0 0 0 transparent; -moz-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; font-family: "新宋体"; }
+#pingpai-3-main #mainBox h3 { font-size: 32px; color: #a58646; font-weight: normal; text-indent: 2em; text-align: left; margin-bottom: 10px; }
+#pingpai-3-main #mainBox p { text-indent: 2em; font-size: 26px; line-height: 2.2em; color: #fff; text-align: justify; }
+#pingpai-3-main #content { position: absolute; left: 0; top: 0; text-align: center; padding: 0; background: transparent; }
+#pingpai-3-main #content p { padding-right: 20px; }
+
+#pingpai-3-right { width: 600px; height: 580px; position: absolute; right: 200%; top: 0; opacity: 0; }
 
 /*# sourceMappingURL=index.css.map */
