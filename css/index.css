@@ -30,13 +30,13 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 .section1 { position: relative; }
 .section1 .slide-img { width: 100%; height: 100%; }
 
-#logo { position: absolute; left: 0; top: 80px; width: 168px; height: 50px; opacity: 0; z-index: 99999; }
+#logo { position: absolute; left: 0; top: 45px; width: 168px; height: 50px; opacity: 0; z-index: 99999; }
 
 .slide { position: relative; }
 
-#banner-center { width: 128px; height: 236px; position: absolute; left: 50%; top: 50%; margin-top: -118px; margin-left: -64px; opacity: 0; transform: scale(0.5); background: rgba(27, 82, 59, 0.5); }
+#banner-center { width: 128px; height: 236px; position: absolute; left: 50%; top: 50%; margin-top: -118px; margin-left: -64px; opacity: 0; transform: scale(0.5); background: rgba(247, 243, 208, 0.15); }
 
-#nav { position: absolute; margin-left: 50%; left: 0; top: 80px; opacity: 0; z-index: 99999; }
+#nav { position: absolute; margin-left: 50%; left: 0; top: 54px; opacity: 0; z-index: 99999; }
 #nav li { margin-right: 50px; float: left; }
 #nav li.on a { color: #a58646; }
 #nav a { font-size: 20px; color: #fff; }
@@ -54,8 +54,8 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 @-webkit-keyframes myfodeIn { from { opacity: 0; left: 0; }
   to { opacity: 1; left: 96px; } }
 @keyframes flicker { 0% { box-shadow: 0 0 1rem rgba(27, 82, 59, 0), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1); opacity: 0; transform: scale(0.5); }
-  50% { box-shadow: -1rem 0 8rem 1rem rgba(27, 82, 59, 0.3), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1); opacity: 0.5; transform: scale(0.75); }
-  100% { box-shadow: -1rem 0 8rem 1rem rgba(27, 82, 59, 0.5), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1); opacity: 1; transform: scale(1); } }
+  50% { box-shadow: -1rem 0 8rem 1rem rgba(247, 243, 208, 0.15), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1); opacity: 0.5; transform: scale(0.75); }
+  100% { box-shadow: -1rem 0 8rem 1rem rgba(247, 243, 208, 0.3), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1); opacity: 1; transform: scale(1); } }
 .section2 .bannar { width: 100%; height: 100%; position: relative; }
 .section2 .img { width: 100%; height: 100%; overflow: hidden; }
 .section2 .img ul { height: 100%; }
@@ -77,7 +77,7 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 
 .section6 { background: url(../images/section6-bg.jpg) center; background-size: cover; }
 
-#divTyping { width: 580px; position: absolute; top: 50%; left: 50%; margin-top: -100px; margin-left: -290px; color: #fff; font-size: 28px; line-height: 2.2em; font-family: "新宋体"; text-align: center; }
+#divTyping { width: 100%; position: absolute; top: 50%; left: 0; margin-top: -100px; color: #fff; font-size: 28px; line-height: 2.2em; font-family: "新宋体"; text-align: center; }
 
 .section4 { overflow: hidden; }
 
@@ -184,9 +184,29 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 #pingpai-3-main #mainBox { background: transparent; opacity: 0; width: 600px; height: 580px; position: absolute; top: 0; left: -100%; overflow: hidden; margin: 0 auto; -webkit-box-shadow: 0 0 0 transparent; -moz-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; font-family: "新宋体"; }
 #pingpai-3-main #mainBox h3 { font-size: 32px; color: #a58646; font-weight: normal; text-indent: 2em; text-align: left; margin-bottom: 10px; }
 #pingpai-3-main #mainBox p { text-indent: 2em; font-size: 26px; line-height: 2.2em; color: #fff; text-align: justify; }
-#pingpai-3-main #content { position: absolute; left: 0; top: 0; text-align: center; padding: 0; background: transparent; }
+#pingpai-3-main #content { position: absolute; left: 0; top: 0; text-align: center; padding: 0; padding-bottom: 30px; background: transparent; }
 #pingpai-3-main #content p { padding-right: 20px; }
 
 #pingpai-3-right { width: 600px; height: 580px; position: absolute; right: 200%; top: 0; opacity: 0; }
+
+.product-1 { background: url(../images/product-1-bg.jpg) center; background-size: cover; }
+
+.product-2 { background: url(../images/product-2-bg.jpg) center; background-size: cover; }
+.product-2 #divTyping { font-size: 30px; width: 100%; }
+.product-2 #divTyping span { color: #a58646; font-size: 40px; display: block; }
+
+#product-center { width: 128px; height: 236px; position: absolute; left: 25%; top: 50%; margin-top: -118px; opacity: 0; transform: scale(0.5); background: rgba(247, 243, 208, 0.15); }
+
+#product-h1 { display: inline-block; font-size: 20px; color: #fff; font-family: "新宋体"; position: absolute; left: 25%; top: 50%; margin-top: 180px; margin-left: -76px; opacity: 0; transform: scale(0.5); }
+
+#product-spac { display: inline-block; font-size: 36px; color: #a58646; font-family: "新宋体"; position: absolute; left: 25%; top: 50%; margin-top: 220px; margin-left: -74px; opacity: 0; transform: scale(0.5); }
+
+.fangda-1 { animation: fangda 1.5s linear 2s; -webkit-animation: fangda 1.5s linear 2s; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; }
+
+.fangda-2 { animation: fangda 1.5s linear 3s; -webkit-animation: fangda 1.5s linear 3s; animation-fill-mode: forwards; -webkit-animation-fill-mode: forwards; }
+
+@keyframes fangda { 0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.5; transform: scale(0.75); }
+  100% { opacity: 1; transform: scale(1); } }
 
 /*# sourceMappingURL=index.css.map */
