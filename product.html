@@ -7,15 +7,19 @@
 	<meta name="description" content="布兰美亚" />
     <meta name="keywords" content="布兰美亚" />
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
 	<script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>	
     <script src="js/jquery.easing.min.js"></script>
 	
-	<link rel="stylesheet" href="css/index.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<script>
 	$(function(){
 		$('#fullpage').fullpage({
-			sectionsColor: ['#020504', '#0f1b17',"#0a2922","#111b19"],
+			sectionsColor: ['#020504', '#0f1b17',"#0d1814","#111b19"],
 			'navigation':true,
 			verticalCentered:false,
 			'afterLoad': function(anchorLink, index){
@@ -29,21 +33,7 @@
 				if(index == 2){
                     myTyping(true)
 				}
-				if(index == 3){
-					$('#section4-1').animate({
-						top: '20%'
-					}, 1000, 'easeOutExpo');
-					$('#section4-2').animate({
-						top: '20%'
-					}, 1000, 'easeOutExpo');
-					$('#section4-3').delay(500).animate({
-						left: '10%'
-					}, 1500, 'easeOutExpo');					
-					$('#section4-4').delay(500).animate({
-						right: '10%'
-					}, 1500, 'easeOutExpo');						
-					
-				}
+
 				if(index ==4){
 					$('#section6-1').delay(300).animate({
 						top: '25%',
@@ -73,18 +63,7 @@
 					myTyping()
 				}
 				if(index == 3){
-					$('#section4-1').animate({
-						top: '-10%'
-					}, 1500, 'easeOutExpo');
-					$('#section4-2').animate({
-						top: '-10%'
-					}, 1500, 'easeOutExpo');
-					$('#section4-3').animate({
-						left: '-100%'
-					}, 1500, 'easeOutExpo');					
-					$('#section4-4').animate({
-						right: '-100%'
-					}, 1500, 'easeOutExpo');
+
 				}
 				if(index == 4){
 					$('#section6-1').animate({
@@ -106,6 +85,7 @@
 		});
 	});
 	</script>	
+
 </head>
 <body>
 <div id="fullpage">
@@ -157,9 +137,99 @@
 	</div>
 
 	<div class="section product-3">
-		<div id="section5-1">“一滴，焕颜新生，驻颜魔法，让时光无迹可寻”</div>
-		<div id="section5-2">布兰美亚——轻奢护肤“黑科技”，从此冻龄时光  |  Light luxury skin care "black technology", from this frozen age</div>
-		<div id="section5-3"><img src="images/section5-logo.png" /></div>
+
+
+
+
+	<div class="formContainer swiper-container swiper-container-horizontal swiper-container-autoheight">
+		<div class="swiper-wrapper" id="bot-slide">
+			<div class="swiper-slide swiper-slide-active" >
+				<h3 swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" class="h3 ani">类蛇毒肽</h3>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" class='loading ani'>类蛇毒肽在减少动态纹的功效方面是类肉毒杆菌的5倍,是一种类似蛇毒毒素结构的活性肽。它能通过抑制肌肉收缩而减少皱纹的产生。</p>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" class="span ani">抗衰抗皱</p>
+				<img class="product-banner" src="images/product-banner-1.jpg" />
+			</div>
+			<div class="swiper-slide" >
+				<h3 swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" class="h3 ani">榈酰三肽-5</h3>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" class='loading ani'>棕榈酰三肽-5可以促进真皮层中胶原蛋白和弹性蛋白合成的性能，是一种加速胶原蛋白生成和修复皱纹的理想原料。</p>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" class="span ani">增强细胞活性</p>
+				<img class="product-banner" src="images/product-banner-2.jpg" />
+			</div>
+			<div class="swiper-slide" >
+				<h3 swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" class="h3 ani">透明质酸钠</h3>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" class='loading ani'>于1934年被KARL MEYER从牛眼玻璃体中发现，它是从牛眼玻璃体中提取的一种大分子多糖。</p>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" class="span ani">保持肌肤水分</p>
+				<img class="product-banner" src="images/product-banner-3.jpg" />
+			</div>
+			<div class="swiper-slide" >
+				<h3 swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" class="h3 ani">神经酰胺3</h3>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" class='loading ani'>是角质层中重要的活肤成分，能增强皮肤屏障，重建细胞，形成有效的屏障来防止水分流失和减少外部环境的影响。</p>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" class="span ani">锁住肌肤水分</p>
+				<img class="product-banner" src="images/product-banner-4.jpg" />
+			</div>
+
+			<div class="swiper-slide">
+				<h3 swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" class="h3 ani">马齿苋及银耳多糖</h3>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" class='loading ani'>马齿苋含有丰富的二羟乙胺、苹果酸、葡萄糖、钙、磷、铁以及维生素等营养物质。</p>
+				<p swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" class="span ani">抗氧化抗衰</p>
+				<img class="product-banner" src="images/product-banner-5.jpg" />
+			</div>
+
+		</div>
+	</div>
+	<div class="formTab clear">
+		<a class="active"><img src="images/product-icon-1.png"/><p>类蛇毒肽</p></a>
+		<a class=""><img src="images/product-icon-2.png"/><p>榈酰三肽-5</p></a>
+		<a class=""><img src="images/product-icon-3.png"/><p>透明质酸钠</p></a>
+		<a class=""><img src="images/product-icon-4.png"/><p>神经酰胺3</p></a>
+		<a class=""><img src="images/product-icon-5.png"/><p>马齿苋及银耳多糖</p></a>
+	</div>
+	
+	<div class="product-2-h1">布兰美亚 岂止所见</div>
+	
+
+
+
+  <script>
+  
+    
+$(function() {
+    // 底部切换
+    var tabsSwiper2 = new Swiper('.formContainer',{
+      speed:500,
+	  autoHeight: true,
+      on: {	  
+
+		  init: function(){
+			swiperAnimateCache(this); //隐藏动画元素 
+			swiperAnimate(this); //初始化完成开始动画
+		  }, 
+		  slideChangeTransitionStart: function(){
+			$(".formTab .active").removeClass('active')
+			$(".formTab a").eq(this.activeIndex).addClass('active')  
+		  },		  
+		  slideChangeTransitionEnd: function(){ 
+			swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+			//this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+		  }  
+      }	  
+    })
+    $(".formTab a").on('touchstart mousedown',function(e){
+      e.preventDefault()
+      $(".formTab .active").removeClass('active')
+      $(this).addClass('active')
+      tabsSwiper2.slideTo( $(this).index() )
+    })
+    $(".formTab a").click(function(e){
+      e.preventDefault()
+    });
+}) 
+
+
+
+  </script>
+
+
 	</div>
 	<div class="section section6">
 		<div id="section6-1"><img src="images/section5-logo.png" /></div>		

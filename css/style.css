@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#dt-list, #fenye { font-size: 0; -webkit-text-size-adjust: none; }
+#dt-list, #fenye, .product-3 .formTab { font-size: 0; -webkit-text-size-adjust: none; }
 
 /* 设置HTML5元素为块 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -25,6 +25,8 @@ a img { border: none; }
 a > img { vertical-align: bottom; }
 
 body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333333; overflow-y: scroll; overflow-x: hidden; *overflow-y: auto !important; font-size: px2rem(22px); }
+
+.ani { position: absolute; }
 
 /*首页*/
 .section1 { position: relative; }
@@ -147,7 +149,7 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 
 #fenye li.thisclass { color: #a58646; background: #033c36; padding: 6px 12px; border: 0; box-sizing: border-box; }
 
-/**/
+/*品牌*/
 .pingpai-1 { background: url(../images/pingpai-1-bg.jpg) center; background-size: cover; }
 .pingpai-1 .pingpai-1-h1 { font-size: 30px; color: #a58646; text-align: center; font-family: "新宋体"; position: absolute; top: 50%; left: 0; width: 100%; }
 
@@ -189,6 +191,7 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 
 #pingpai-3-right { width: 600px; height: 580px; position: absolute; right: 200%; top: 0; opacity: 0; }
 
+/*产品*/
 .product-1 { background: url(../images/product-1-bg.jpg) center; background-size: cover; }
 
 .product-2 { background: url(../images/product-2-bg.jpg) center; background-size: cover; }
@@ -208,5 +211,17 @@ body { font-family: 'Heiti SC', 'Microsoft YaHei', "Helvetica Neue", Helvetica, 
 @keyframes fangda { 0% { opacity: 0; transform: scale(0.5); }
   50% { opacity: 0.5; transform: scale(0.75); }
   100% { opacity: 1; transform: scale(1); } }
+.product-3 .formTab { position: absolute; bottom: 0; left: 0; width: 70%; height: 260px; background: #526761; text-align: center; z-index: 99; }
+.product-3 .formTab a { width: 18%; height: 260px; display: inline-block; color: #fff; font-size: 22px; }
+.product-3 .formTab a img { display: inline-block; width: 144px; height: 144px; padding-top: 40px; }
+.product-3 .formTab a p { line-height: 1em; margin-top: 14px; }
+.product-3 .formTab a.active { background: #033c36; color: #a58646; }
+.product-3 .product-2-h1 { position: absolute; bottom: 50px; right: 90px; display: inline-block; font-size: 24px; font-family: "新宋体"; color: #a58646; }
 
-/*# sourceMappingURL=index.css.map */
+#bot-slide { font-family: "新宋体"; }
+#bot-slide .h3 { font-size: 30px; color: #a58646; top: 12%; left: 5%; }
+#bot-slide .loading { top: 20%; left: 5%; font-size: 24px; color: #fff; width: 19%; line-height: 2em; }
+#bot-slide .span { top: 65%; left: 5%; font-size: 24px; color: #a58646; background: #033c36; display: inline-block; }
+#bot-slide .product-banner { width: 74%; margin-left: 26%; }
+
+/*# sourceMappingURL=style.css.map */

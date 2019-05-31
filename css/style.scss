@@ -111,6 +111,9 @@ body {
   *overflow-y: auto !important;
   font-size: px2rem(22px);
 }
+.ani{
+	position:absolute;
+}
 /*首页*/
 .section1{
 	position: relative;
@@ -681,7 +684,7 @@ float:left;
 }
 
 
-/**/
+/*品牌*/
 .pingpai-1{
     background: url(../images/pingpai-1-bg.jpg) center;
     background-size: cover; 
@@ -859,7 +862,7 @@ float:left;
 
 
 
-
+/*产品*/
 .product-1{
     background: url(../images/product-1-bg.jpg) center;
     background-size: cover;
@@ -948,4 +951,78 @@ float:left;
      opacity: 1;
     transform:scale(1);  
   }
+}
+
+.product-3{
+	.formTab{
+		position: absolute;
+		bottom: 0;
+		left:0;
+		width:70%;
+		height:260px;
+		background:#526761;
+		text-align:center;
+		@extend %fontsize-none;
+		z-index:99;
+		a{
+			width:18%;
+			height: 260px;
+			display: inline-block;
+			color: #fff;
+			font-size: 22px;
+			img{
+				display: inline-block;
+				width:144px;
+				height:144px;
+				padding-top: 40px;
+			}
+			p{
+				line-height: 1em;
+				margin-top: 14px;
+			}
+		}
+		a.active{
+			background: #033c36;
+			color:$color;
+		}
+	}
+	.product-2-h1{
+		position: absolute;
+		bottom: 50px;
+		right:90px;
+		display: inline-block;
+		font-size: 24px;
+        font-family: "新宋体"; 	
+		color: $color;
+	}
+}
+
+#bot-slide{
+    font-family: "新宋体"; 		
+	.h3{
+		font-size: 30px;
+		color: $color;
+		top:12%;
+		left:5%;
+	}
+	.loading{
+		top:20%;
+		left:5%;
+		font-size: 24px;
+		color:#fff;
+		width:19%;
+		line-height: 2em;
+	}
+	.span{
+		top:65%;
+		left:5%;
+		font-size: 24px;
+		color:$color;
+		background: #033c36;
+		display: inline-block;
+	}
+	.product-banner{
+		width:74%;
+		margin-left:26%;
+	}
 }
